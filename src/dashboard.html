@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="..\Assets\dashboard.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/Images/favicon.png" />
+    <title>FinTrack Pro | Dashboard</title>
+</head>
+<body>
+<nav>
+    <div id="logo">
+        <img src="../Assets/Images/FinTrack_logo.png" alt="Logo here">
+    </div>
+    <div id="menu">
+        <div class="darktheme">
+            <input type="checkbox" id="goDark">
+            <label for="goDark" class="toggle">
+                <span class="toggle-ball"></span>
+            </label>
+        </div>
+        <div class="username">
+            <img src="https://i.pinimg.com/736x/da/e7/d6/dae7d6ab8e2abd3e74d776a5fd49a6cb.jpg" alt="Profile picture here">
+            <p>@<span>username</span></p>
+        </div>
+        <div class="logout"><button><i class="ri-logout-box-r-line"></i> Logout</button></div>
+<!--        <i class="ri-notification-fill"></i>-->
+    </div>
+</nav>
+
+<section id="side-section">
+    <div class="section-menu">
+
+        <div id="side-menu">
+
+        <div class="profile">
+
+            <img src="https://i.pinimg.com/736x/da/e7/d6/dae7d6ab8e2abd3e74d776a5fd49a6cb.jpg" alt="Profile picture here">
+            <div class="profile-name">
+                <p class="user-fullname"><span>Full-Name</span></p>
+                <p class="user-email"><span>example@gmail.com</span></p>
+            </div>
+
+        </div>
+
+        <button class="dashboard">
+            <p><i class="ri-dashboard-line"></i> Dashboard</p>
+        </button>
+
+        <button class="side-setting">
+            <p><i class="ri-settings-2-line"></i> Setting</p>
+        </button>
+
+            <div class="setting-box">
+                <div class="change-currency">
+                    <p>Choose Currency: </p>
+                    <select id="currency">
+                        <option value="$">USD</option>
+                        <option value="€">EUR</option>
+                        <option value="£">GBP</option>
+                        <option value="¥">YEN</option>
+                        <option value="₹">INR</option>
+                    </select>
+                </div>
+                <div class="delete-all">
+                    <p>Delete All Transaction : </p>
+                    <i class="ri-delete-bin-3-fill" style="color: #DD3A3A"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="transaction-box">
+            <form>
+                <div class="transactionBox-heading">
+                    <h3>Add Transaction</h3>
+                    <i class="ri-close-circle-line close"></i>
+                </div>
+                <div class="amount-type">
+                    <div class="amount">
+                        <p>Amount</p>
+                        <input required type="number">
+                    </div>
+                    <div class="type">
+                        <p>Type</p>
+                        <select required id="type">Type
+                            <option value="Expense">Expense</option>
+                            <option value="Income">Income</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>Description</p>
+                    <textarea required id="description" name="description" rows="4"></textarea>
+                </div>
+                <div class="category-date">
+                        <div class="category">
+                            <p>Category</p>
+                            <select required id="category">Category
+                                <option value="">select a category</option>
+                                <option value="Food">Food & Dining</option>
+                                <option value="Shopping">Shopping</option>
+                                <option value="Recharge">Recharge & Bills</option>
+                                <option value="Petrol">Petrol & Gas</option>
+                                <option value="Utilities">Utilities</option>
+                                <option value="Salary">Salary</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="date">
+                            <p>Date</p>
+                            <input type="date" required id="date">
+                        </div>
+                </div>
+                <div class="add">
+                    <button>Add</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="add-transaction">
+            <p><i class="ri-add-large-fill"></i> ADD TRANSACTION</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="financial-overview">
+    <main>
+        <div class="heading">
+            <h2>FINANCIAL OVERVIEW</h2>
+            <p>Real-time tracking application</p>
+        </div>
+
+        <div class="finance-cards">
+            <div class="card">
+                <div class="icon balance">
+                    <i class="ri-bank-fill"></i>
+                </div>
+                <div class="amount amt">
+                    <p>Current Balance</p>
+                    <h2 class = "current-amount">$<span>0000.00</span></h2>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon income">
+                    <i class="ri-arrow-right-up-line"></i>
+                </div>
+                <div class="amount amt">
+                    <p>Total income</p>
+                    <h2 class = 'income-amount'>$<span>0000.00</span></h2>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon expense">
+                    <i class="ri-arrow-right-down-line"></i>
+                </div>
+                <div class="amount amt">
+                    <p>Total Expense</p>
+                    <h2 class="expense-amount">$<span>0000.00</span></h2>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon transaction">
+                    <i class="ri-exchange-funds-fill"></i>
+                </div>
+                <div class="amount">
+                    <p>Total Transaction</p>
+                    <h2 class = 'count-amount'>0</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="tracker">
+            <div id="chart-tracker">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div id="transaction-tracker">
+                <h2>ALL TRANSACTION</h2>
+                <div class="navbar">
+                    <input type="text" placeholder="Search your entries with Description, Amount, Category or Date" id="search-bar">
+                    <label for="search-bar"></label>
+<!--                    <i class="ri-search-2-fill"></i>-->
+
+                    <label for="filter-bar"></label>
+<!--                    <i class="ri-filter-2-fill"></i>-->
+                    <select id="filter-bar">
+                        <option value="">All Types</option>
+                        <option value="Income">Income</option>
+                        <option value="Expense">Expense</option>
+                    </select>
+                </div>
+                <div class="entry-menus">
+                    <div class="date">Date</div>
+                    <div class="description">Description</div>
+                    <div class="category">Category</div>
+                    <div class="amount">Amount</div>
+                    <div class="action">Action</div>
+                </div>
+                <div class="entry-lists">
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../Assets/dashboard.js" type="module"></script>
+<!--<script src="../Assets/charts.js" type = "module"></script>-->
+</body>
+</html>
